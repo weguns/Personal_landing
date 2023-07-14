@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -11,12 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-theme-background scroll-smooth font-FiraSans">
+<body class="bg-theme-background font-FiraSans">
 <!-- ---- || all app svg || ---- -->
 <svg class="hidden">
     <symbol id="search-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+        <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd"/>
     </symbol>
+    <symbol id="cursor-arrow-ripple" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
+    </symbol>
+
 </svg>
 <!-- NavBar Section -->
 <nav class="flex justify-between items-center fixed top-0 left-0 right-0 pl-24 pr-16 py-5 backdrop-blur-sm font-medium">
@@ -25,7 +29,7 @@
     </div>
     <div class="flex justify-around items-center child:inline-block child:px-7.5 child:text-white child:border-theme-background child:text-xl child:h-10 child:leading-10 child:transition-colors child-hover:border-b-4 child-hover:border-solid child-hover:border-theme-blue child:delay-100">
         <a href="#Home">Home</a>
-        <a href="#">About</a>
+        <a href="#About">About</a>
         <a href="#">Services</a>
         <a href="#">Portfolio</a>
         <a href="#">Testimonials</a>
@@ -49,16 +53,86 @@
 <header id="Home" class="container mx-auto flex flex-col justify-center items-center w-full h-[100vh] font-bold">
     <div class="flex min-h-screen items-center justify-center p-10">
         <div class="w-max">
-            <h1 id="typer" class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-6 pb-2.5 text-6xl text-white font-bold">We Are Raven Digital</h1>
+            <h1 id="typer" class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-6 pb-2.5 text-6xl text-white font-bold">
+                We Are Raven Digital</h1>
         </div>
     </div>
 </header>
 <!-- section 2(About) -->
-<section id="About" class="container mx-auto flex flex-col justify-center items-center w-full h-[100vh]">
-    <div class="w-80 h-80 bg-theme-background2 rounded pl-6 pr-4 py-9">
-        <h3 class="text-white text-2xl mb-9 font-extrabold">APP DEVELOPMENT</h3>
-        <p class="text-base text-white mb-9 font-normal">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="text-base text-white underline font-medium">Contact Us</a>
+<section id="About" class="container mx-auto w-full h-[100vh] flex flex-col justify-end items-center py-7">
+    <h2 class="text-5xl text-white font-medium mb-10">What We do</h2>
+    <div class="grid grid-cols-4 grid-rows-2 gap-3">
+        <div class="relative w-80 h-80 bg-theme-background2 rounded pl-6 pr-4 py-9 overflow-hidden group">
+            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">APP DEVELOPMENT</h3>
+            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
+            <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
+            <div class="z-40 absolute right-6 bottom-5">
+                <svg class="h-10 w-10 text-white">
+                    <use href="#cursor-arrow-ripple"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="relative w-80 h-80 bg-theme-background2 rounded pl-6 pr-4 py-9 overflow-hidden group">
+            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">APP DEVELOPMENT</h3>
+            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
+            <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
+            <div class="z-40 absolute right-6 bottom-5">
+                <svg class="h-10 w-10 text-white">
+                    <use href="#cursor-arrow-ripple"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="relative w-80 h-80 bg-theme-background2 rounded pl-6 pr-4 py-9 overflow-hidden group">
+            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">APP DEVELOPMENT</h3>
+            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
+            <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
+            <div class="z-40 absolute right-6 bottom-5">
+                <svg class="h-10 w-10 text-white">
+                    <use href="#cursor-arrow-ripple"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="relative w-80 h-80 bg-theme-background2 rounded pl-6 pr-4 py-9 overflow-hidden group">
+            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">APP DEVELOPMENT</h3>
+            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
+            <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
+            <div class="z-40 absolute right-6 bottom-5">
+                <svg class="h-10 w-10 text-white">
+                    <use href="#cursor-arrow-ripple"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="relative w-80 h-80 bg-theme-background2 rounded pl-6 pr-4 py-9 overflow-hidden group">
+            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">APP DEVELOPMENT</h3>
+            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
+            <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
+            <div class="z-40 absolute right-6 bottom-5">
+                <svg class="h-10 w-10 text-white">
+                    <use href="#cursor-arrow-ripple"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="relative w-80 h-80 bg-theme-background2 rounded pl-6 pr-4 py-9 overflow-hidden group">
+            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">APP DEVELOPMENT</h3>
+            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
+            <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
+            <div class="z-40 absolute right-6 bottom-5">
+                <svg class="h-10 w-10 text-white">
+                    <use href="#cursor-arrow-ripple"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="relative w-80 h-80  rounded pl-6 pr-4 py-9">
+            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">Solutions for your business</h3>
+            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="inline-block bg-theme-blue py-2.5 px-5 text-white rounded-3xl shadow-lg shadow-theme-blue/30 hover:bg-blue-800 transition-colors">Learn More</a>
+        </div>
     </div>
 </section>
 <script src="./Scripts/app.js"></script>
