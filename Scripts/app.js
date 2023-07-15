@@ -1,3 +1,5 @@
+alert("under Dev Only for 1080 * 700 available")
+
 let element = document.getElementById("typer");
 let whatWeWantToType = ['We Are Freelancer', "We Are Designer", "We Are Editor", "We Are Developer", "We Are Raven Digital"];
 let i = 0;

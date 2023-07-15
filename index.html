@@ -23,7 +23,7 @@
 
 </svg>
 <!-- NavBar Section -->
-<nav class="flex justify-between items-center fixed top-0 left-0 right-0 pl-24 pr-16 py-5 backdrop-blur-sm font-medium">
+<nav class="z-50 flex justify-between items-center absolute top-0 left-0 right-0 pl-24 pr-16 py-5 backdrop-blur-sm font-medium">
     <div class="shrink-0">
         <img class="w-52 shrink-0" src="./Images/SVG/app-logo.svg" alt="logo">
     </div>
@@ -44,7 +44,7 @@
     </div>
 </nav>
 <!-- Social Media On left -->
-<section class="fixed top-0 left-0 bottom-0 w-15 flex flex-col justify-center items-center gap-y-20 border-r border-white border-solid child:-rotate-90 child:text-white child:text-xl child:inline-block">
+<section class="z-50 absolute top-0 left-0 bottom-0 w-15 flex flex-col justify-center items-center gap-y-20 border-r border-white border-solid child:-rotate-90 child:text-white child:text-xl child:inline-block">
     <a href="#">Facebook</a>
     <a href="#">Instagram</a>
     <a href="#">Linkedin</a>
@@ -145,6 +145,55 @@
             <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="inline-block bg-theme-blue py-2.5 px-5 text-white rounded-3xl shadow-lg shadow-theme-blue/30 hover:bg-blue-800 transition-colors">Learn More</a>
         </div>
+    </div>
+</section>
+<!-- section 2(services) -->
+<section id="services" class="container mx-auto w-full h-[100vh] flex flex-col justify-end items-center py-7">
+    <h2 class="text-5xl text-white font-medium mb-10">Our Works</h2>
+    <div class="flex flex-row flex-wrap gap-5 child:shrink-0 justify-end">
+        <a href="#">
+            <img src="./Images/img-1.png" alt="img">
+        </a>
+        <a href="#">
+            <img src="./Images/img-2.png" alt="img">
+        </a>
+        <a href="#">
+            <img src="./Images/img-3.png" alt="img">
+        </a>
+        <div class="relative h-96 rounded p-24">
+            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">Solutions for your business</h3>
+            <p class="text-base text-white w-64 mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="inline-block bg-theme-blue py-2.5 px-5 text-white rounded-3xl shadow-lg shadow-theme-blue/30 hover:bg-blue-800 transition-colors">Learn More</a>
+        </div>
+        <a href="#">
+            <img src="./Images/img-4.png" alt="img">
+        </a>
+        <a href="#">
+            <img src="./Images/img-5.png" alt="img">
+        </a>
+    </div>
+</section>
+<!-- section 3(portfolio) -->
+<section id="portfolio" class="mt-20 bg-theme-blue2 w-full py-15 px-80 grid grid-cols-5 grid-rows-1 divide-x divide-theme-borders/60 child:h-56 child:flex child:justify-center child:items-start child:flex-col child:gap-y-2 child:pl-16">
+    <div>
+        <p class="text-white text-5xl">1000</p>
+        <p class="text-theme-borders text-3xl">users</p>
+    </div>
+    <div>
+        <p class="text-white text-5xl">1000</p>
+        <p class="text-theme-borders text-3xl">users</p>
+    </div>
+    <div>
+        <p class="text-white text-5xl">1000</p>
+        <p class="text-theme-borders text-3xl">users</p>
+    </div>
+    <div>
+        <p class="text-white text-5xl">1000</p>
+        <p class="text-theme-borders text-3xl">users</p>
+    </div>
+    <div>
+        <p class="text-white text-5xl">1000</p>
+        <p class="text-theme-borders text-3xl">users</p>
     </div>
 </section>
 <script src="./Scripts/app.js"></script>
