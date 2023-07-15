@@ -2795,10 +2795,6 @@ video {
   flex-wrap: wrap;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-center {
   align-items: center;
 }
@@ -2895,11 +2891,6 @@ video {
 .bg-theme-background2 {
   --tw-bg-opacity: 1;
   background-color: rgb(27 40 55 / var(--tw-bg-opacity));
-}
-
-.bg-theme-background3 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(11 15 21 / var(--tw-bg-opacity));
 }
 
 .bg-theme-blue {
@@ -3177,8 +3168,8 @@ video {
   padding-right: 1.875rem;
 }
 
-.child\:pl-16 > * {
-  padding-left: 4rem;
+.child\:pl-10 > * {
+  padding-left: 2.5rem;
 }
 
 .child\:text-xl > * {
