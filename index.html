@@ -21,12 +21,14 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5"/>
     </symbol>
     <symbol id="bars-arrow-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
     </symbol>
-    <svg id="bars-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-    </svg>
-
+    <symbol id="bars-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"/>
+    </symbol>
+    <symbol id="arrow-small-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
+    </symbol>
 </svg>
 <!-- navBar -->
 <nav class="flex flex-col justify-center items-center fixed top-0 left-0 right-0 z-50 py-5 md:pb-0 rounded-b-full bg-theme-background3/60 backdrop-blur overflow-hidden">
@@ -34,14 +36,14 @@
         <img class="w-32 sm:w-44" src="./Images/SVG/app-logo.svg" alt="logo">
     </div>
     <div id="dropDown" class="hidden flex-col md:flex-row justify-center items-center gap-0 md:gap-2 xl:gap-5 w-60 sm:w-80 md:w-[100vw] p-3 md:px-5 m-6 sm:m-7 md:m-0 rounded-lg bg-white/10 child:text-white child-hover:text-theme-blue2 child:text-lg child:w-40 child:sm:w-60 child:md:w-auto child-hover:bg-white/50 child:px-5 child:md:px-1 child:lg:px-5 child:py-1 child:rounded-lg child-hover:font-semibold child:md:text-center child:md:tracking-tighter">
-        <a href="#">Home</a>
-        <a href="#About">About</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Testimonials</a>
-        <a href="#">News</a>
-        <a href="#">Contacts</a>
-        <a href="#">Elements</a>
+        <a onclick="sandwich()" href="#">Home</a>
+        <a onclick="sandwich()" href="#About">About</a>
+        <a onclick="sandwich()" href="#">Services</a>
+        <a onclick="sandwich()" href="#">Portfolio</a>
+        <a onclick="sandwich()" href="#">Testimonials</a>
+        <a onclick="sandwich()" href="#">News</a>
+        <a onclick="sandwich()" href="#">Contacts</a>
+        <a onclick="sandwich()" href="#">Elements</a>
     </div>
 </nav>
 <button id="sandwich-down" class="flex justify-center items-center fixed top-7 right-7 p-5 bg-white/10 z-50 rounded-full" onclick="sandwich()">
@@ -50,7 +52,20 @@
     </svg>
 </button>
 <!-- section 1(home) -->
-
+<section class="h-[100vh] bg-gradient-to-r from-theme-background2 to-theme-blue2 ">
+    <div class="flex min-h-screen items-center justify-center bg-gradient-to-tr to-theme-background2 from-theme-blue2 p-10 rounded-b-full relative">
+        <div class="w-max">
+            <h1 class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-3xl sm:text-5xl text-white font-bold">
+                We Are Raven Digital
+            </h1>
+        </div>
+        <button class="absolute -bottom-5 w-20 h-20 bg-black rounded-full bg-gradient-to-tr from-theme-background2 to-theme-blue2 flex justify-center items-center">
+            <svg class="text-white h-10 w-10">
+                <use href="#arrow-small-down"></use>
+            </svg>
+        </button>
+    </div>
+</section>
 <!-- section 2(About) -->
 <section id="About" class="w-full my-30">
     <h2 class="text-5xl text-white font-medium mb-10 text-center">What We do</h2>
