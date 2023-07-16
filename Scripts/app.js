@@ -1,12 +1,10 @@
-alert("under Dev Only for 1080 * 700 available")
-
-let element = document.getElementById("typer");
-let whatWeWantToType = ['We Are Freelancer', "We Are Designer", "We Are Editor", "We Are Developer", "We Are Raven Digital"];
-let i = 0;
-let interval = setInterval(function (){
-    if (i === whatWeWantToType.length){
-        i = 0;
+function sandwich() {
+    let element = document.getElementById("dropDown");
+    if (element.classList.contains("hidden")) {
+        element.classList.remove("hidden");
+        element.classList.add("flex");
+    } else if (element.classList.contains("flex")) {
+        element.classList.remove("flex");
+        element.classList.add("hidden");
     }
-    element.innerHTML = whatWeWantToType[i];
-    i++
-}, 4000)
+}

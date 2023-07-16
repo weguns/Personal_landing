@@ -18,17 +18,23 @@
         <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd"/>
     </symbol>
     <symbol id="cursor-arrow-ripple" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5"/>
     </symbol>
+    <symbol id="bars-arrow-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
+    </symbol>
+    <svg id="bars-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+    </svg>
 
 </svg>
-<!-- NavBar Section -->
-<nav class="z-50 flex justify-between items-center absolute top-0 left-0 right-0 pl-24 pr-16 py-5 backdrop-blur-sm font-medium">
-    <div class="shrink-0">
-        <img class="w-52 shrink-0" src="./Images/SVG/app-logo.svg" alt="logo">
+<!-- navBar -->
+<nav class="flex flex-col justify-center items-center fixed top-0 left-0 right-0 z-50 py-5 md:pb-0 rounded-b-full bg-theme-background3/60 backdrop-blur overflow-hidden">
+    <div class="shrink-0 md:mb-7">
+        <img class="w-32 sm:w-44" src="./Images/SVG/app-logo.svg" alt="logo">
     </div>
-    <div class="flex justify-around items-center child:inline-block child:px-7.5 child:text-white child:border-theme-background child:text-xl child:h-10 child:leading-10 child:transition-colors child-hover:border-b-4 child-hover:border-solid child-hover:border-theme-blue child:delay-100">
-        <a href="#Home">Home</a>
+    <div id="dropDown" class="hidden flex-col md:flex-row justify-center items-center gap-0 md:gap-2 xl:gap-5 w-60 sm:w-80 md:w-[100vw] p-3 md:px-5 m-6 sm:m-7 md:m-0 rounded-lg bg-white/10 child:text-white child-hover:text-theme-blue2 child:text-lg child:w-40 child:sm:w-60 child:md:w-auto child-hover:bg-white/50 child:px-5 child:md:px-1 child:lg:px-5 child:py-1 child:rounded-lg child-hover:font-semibold child:md:text-center child:md:tracking-tighter">
+        <a href="#">Home</a>
         <a href="#About">About</a>
         <a href="#">Services</a>
         <a href="#">Portfolio</a>
@@ -36,36 +42,24 @@
         <a href="#">News</a>
         <a href="#">Contacts</a>
         <a href="#">Elements</a>
-        <a href="#" class="pt-2">
-            <svg class="h-6 w-6">
-                <use href="#search-svg"></use>
-            </svg>
-        </a>
     </div>
 </nav>
-<!-- Social Media On left -->
-<section class="z-50 absolute top-0 left-0 bottom-0 w-15 flex flex-col justify-center items-center gap-y-20 border-r border-white border-solid child:-rotate-90 child:text-white child:text-xl child:inline-block">
-    <a href="#">Facebook</a>
-    <a href="#">Instagram</a>
-    <a href="#">Linkedin</a>
-</section>
-<!-- Section 1(Home) -->
-<header id="Home" class="container mx-auto flex flex-col justify-center items-center w-full h-[100vh] font-bold">
-    <div class="flex min-h-screen items-center justify-center p-10">
-        <div class="w-max">
-            <h1 id="typer" class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-6 pb-2.5 text-6xl text-white font-bold">
-                We Are Raven Digital</h1>
-        </div>
-    </div>
-</header>
+<button id="sandwich-down" class="flex justify-center items-center fixed top-7 right-7 p-5 bg-white/10 z-50 rounded-full" onclick="sandwich()">
+    <svg class="h-6 w-6 text-white">
+        <use href="#bars-4"></use>
+    </svg>
+</button>
+<!-- section 1(home) -->
+
 <!-- section 2(About) -->
-<section id="About" class="container mx-auto w-full h-[100vh] flex flex-col justify-end items-center py-7">
-    <h2 class="text-5xl text-white font-medium mb-10">What We do</h2>
-    <div class="grid grid-cols-4 grid-rows-2 gap-3">
-        <div class="relative w-80 h-80 bg-theme-background2 rounded overflow-hidden group">
-            <div class="absolute left-6 right-4 top-9 bottom-9 pl-6 pr-4 py-9 z-40">
+<section id="About" class="w-full my-30">
+    <h2 class="text-5xl text-white font-medium mb-10 text-center">What We do</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-5 items-center justify-items-center container mx-auto px-2 xl:px-24 2xl:px-10">
+        <div class="relative w-full h-72 sm:w-72 sm:h-72 md:h-80 md:w-80 lg:h-72 lg:w-72 xl:w-80 xl:h-80 2xl:w-87.5 2xl:h-87.5 bg-theme-background2 rounded overflow-hidden group cursor-pointer">
+            <div class="absolute px-6 py-9 z-40">
                 <h3 class="text-white text-2xl mb-9 font-extrabold">APP DEVELOPMENT</h3>
-                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on
+                    the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
             </div>
             <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
@@ -75,10 +69,11 @@
                 </svg>
             </div>
         </div>
-        <div class="relative w-80 h-80 bg-theme-background2 rounded overflow-hidden group">
-            <div class="absolute left-6 right-4 top-9 bottom-9 pl-6 pr-4 py-9 z-40">
+        <div class="relative w-full h-72 sm:w-72 sm:h-72 md:h-80 md:w-80 lg:h-72 lg:w-72 xl:w-80 xl:h-80 2xl:w-87.5 2xl:h-87.5 bg-theme-background2 rounded overflow-hidden group cursor-pointer">
+            <div class="absolute px-6 py-9 z-40">
                 <h3 class="text-white text-2xl mb-9 font-extrabold">APP DEVELOPMENT</h3>
-                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on
+                    the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
             </div>
             <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
@@ -88,10 +83,11 @@
                 </svg>
             </div>
         </div>
-        <div class="relative w-80 h-80 bg-theme-background2 rounded overflow-hidden group">
-            <div class="absolute left-6 right-4 top-9 bottom-9 pl-6 pr-4 py-9 z-40">
+        <div class="relative w-full h-72 sm:w-72 sm:h-72 md:h-80 md:w-80 lg:h-72 lg:w-72 xl:w-80 xl:h-80 2xl:w-87.5 2xl:h-87.5 bg-theme-background2 rounded overflow-hidden group cursor-pointer">
+            <div class="absolute px-6 py-9 z-40">
                 <h3 class="text-white text-2xl mb-9 font-extrabold">APP DEVELOPMENT</h3>
-                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on
+                    the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
             </div>
             <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
@@ -101,10 +97,11 @@
                 </svg>
             </div>
         </div>
-        <div class="relative w-80 h-80 bg-theme-background2 rounded overflow-hidden group">
-            <div class="absolute left-6 right-4 top-9 bottom-9 pl-6 pr-4 py-9 z-40">
+        <div class="relative w-full h-72 sm:w-72 sm:h-72 md:h-80 md:w-80 lg:h-72 lg:w-72 xl:w-80 xl:h-80 2xl:w-87.5 2xl:h-87.5 bg-theme-background2 rounded overflow-hidden group cursor-pointer">
+            <div class="absolute px-6 py-9 z-40">
                 <h3 class="text-white text-2xl mb-9 font-extrabold">APP DEVELOPMENT</h3>
-                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on
+                    the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
             </div>
             <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
@@ -114,10 +111,11 @@
                 </svg>
             </div>
         </div>
-        <div class="relative w-80 h-80 bg-theme-background2 rounded overflow-hidden group">
-            <div class="absolute left-6 right-4 top-9 bottom-9 pl-6 pr-4 py-9 z-40">
+        <div class="relative w-full h-72 sm:w-72 sm:h-72 md:h-80 md:w-80 lg:h-72 lg:w-72 xl:w-80 xl:h-80 2xl:w-87.5 2xl:h-87.5 bg-theme-background2 rounded overflow-hidden group cursor-pointer">
+            <div class="absolute px-6 py-9 z-40">
                 <h3 class="text-white text-2xl mb-9 font-extrabold">APP DEVELOPMENT</h3>
-                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on
+                    the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
             </div>
             <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
@@ -127,10 +125,11 @@
                 </svg>
             </div>
         </div>
-        <div class="relative w-80 h-80 bg-theme-background2 rounded overflow-hidden group">
-            <div class="absolute left-6 right-4 top-9 bottom-9 pl-6 pr-4 py-9 z-40">
+        <div class="relative w-full h-72 sm:w-72 sm:h-72 md:h-80 md:w-80 lg:h-72 lg:w-72 xl:w-80 xl:h-80 2xl:w-87.5 2xl:h-87.5 bg-theme-background2 rounded overflow-hidden group cursor-pointer">
+            <div class="absolute px-6 py-9 z-40">
                 <h3 class="text-white text-2xl mb-9 font-extrabold">APP DEVELOPMENT</h3>
-                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on
+                    the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="text-base text-white underline font-medium z-40">Contact Us</a>
             </div>
             <div class="absolute -right-10 -bottom-15 w-36 h-36 bg-theme-blue rounded-tl-3xl group-hover:w-[450px] group-hover:h-[450px] group-hover:rounded-full group-hover:-right-1/2 group-hover:-bottom-1/2 transition-all z-10 duration-500 group-hover:z-10 shadow-lg shadow-theme-blue/30 delay-200"></div>
@@ -140,60 +139,13 @@
                 </svg>
             </div>
         </div>
-        <div class="relative w-80 h-80  rounded pl-6 pr-4 py-9">
-            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">Solutions for your business</h3>
-            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="inline-block bg-theme-blue py-2.5 px-5 text-white rounded-3xl shadow-lg shadow-theme-blue/30 hover:bg-blue-800 transition-colors">Learn More</a>
+        <div class="relative w-full h-72 sm:w-72 sm:h-72 md:h-80 md:w-80 lg:h-72 lg:w-72 xl:w-80 xl:h-80 2xl:w-87.5 2xl:h-87.5 px-6 py-9 z-40">
+            <h3 class="text-white text-2xl mb-9 font-extrabold">APP DEVELOPMENT</h3>
+            <p class="text-base text-white mb-9 font-normal text-justify z-40">Some quick example text to build on the
+                card title and make up the bulk of the card's content.</p>
+            <a href="#" class="inline-block bg-theme-blue py-2.5 px-5 text-white rounded-3xl shadow-lg shadow-theme-blue/30 hover:bg-blue-800 transition-colors">Learn
+                More</a>
         </div>
-    </div>
-</section>
-<!-- section 2(services) -->
-<section id="services" class="container mx-auto w-full h-[100vh] flex flex-col justify-end items-center py-7">
-    <h2 class="text-5xl text-white font-medium mb-10">Our Works</h2>
-    <div class="flex flex-row flex-wrap gap-5 child:shrink-0 justify-end">
-        <a href="#">
-            <img src="./Images/img-1.png" alt="img">
-        </a>
-        <a href="#">
-            <img src="./Images/img-2.png" alt="img">
-        </a>
-        <a href="#">
-            <img src="./Images/img-3.png" alt="img">
-        </a>
-        <div class="relative h-96 rounded p-24">
-            <h3 class="text-white text-2xl mb-9 font-extrabold z-40">Solutions for your business</h3>
-            <p class="text-base text-white w-64 mb-9 font-normal text-justify z-40">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="inline-block bg-theme-blue py-2.5 px-5 text-white rounded-3xl shadow-lg shadow-theme-blue/30 hover:bg-blue-800 transition-colors">Learn More</a>
-        </div>
-        <a href="#">
-            <img src="./Images/img-4.png" alt="img">
-        </a>
-        <a href="#">
-            <img src="./Images/img-5.png" alt="img">
-        </a>
-    </div>
-</section>
-<!-- section 3(portfolio) -->
-<section id="portfolio" class="mt-20 bg-theme-blue2 w-full py-15 px-80 grid grid-cols-5 grid-rows-1 divide-x divide-theme-borders/60 child:h-56 child:flex child:justify-center child:items-start child:flex-col child:gap-y-2 child:pl-10">
-    <div>
-        <p class="text-white text-5xl">1000</p>
-        <p class="text-theme-borders text-3xl">users</p>
-    </div>
-    <div>
-        <p class="text-white text-5xl">1000</p>
-        <p class="text-theme-borders text-3xl">users</p>
-    </div>
-    <div>
-        <p class="text-white text-5xl">1000</p>
-        <p class="text-theme-borders text-3xl">users</p>
-    </div>
-    <div>
-        <p class="text-white text-5xl">1000</p>
-        <p class="text-theme-borders text-3xl">users</p>
-    </div>
-    <div>
-        <p class="text-white text-5xl">1000</p>
-        <p class="text-theme-borders text-3xl">users</p>
     </div>
 </section>
 <script src="./Scripts/app.js"></script>
